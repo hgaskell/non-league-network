@@ -1,0 +1,33 @@
+/* custom-tailwind.css */
+@layer utilities {
+
+    body {
+      font-family: "Lato", sans-serif;
+    }
+
+    .hero-banner {
+      background-image:linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url();
+      /* background-image:linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(http://127.0.0.1:8000/storage/images/hero-banner.jpg); */
+    }
+
+    .primary-color {
+        color: #55c57a!important;
+    }
+
+    .text-color {
+      color: #ffffff;
+    }
+
+    .bg-primary-700{
+      background-color: #55c57a!important;
+    }
+
+    .ring-primary-500:focus ,.border-primary-500:focus {
+      border-color: #55c57a;
+    }
+
+    .primary-color-hover:hover{
+      color: #ffffff!important;
+      background-color: #55c57a;
+    }
+  }
