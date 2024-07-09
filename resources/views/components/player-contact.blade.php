@@ -1,11 +1,10 @@
 @props(['player'])
 
-<div class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+<div class="px-6 py-8 background-primary text-color">
   <div class="mx-auto max-w-2xl text-center">
-    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contact sales</h2>
-    <p class="mt-2 text-lg leading-8 text-gray-600">Aute magna irure deserunt veniam aliqua magna enim voluptate.</p>
+    <h2 class="font-bold tracking-tight text-color sm:text-5xl pb-5 text-center">Contact {{ ucwords($player->player_name) }}</h2>
   </div>
-  <form action="/players/{{ $player->slug }}/messages" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
+  <form action="/players/{{ $player->slug }}/messages" method="POST" class="max-w-lg mx-auto mt-10">
     @csrf
     <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
         <x-form.input name="email" type="email" label="Your Email" />

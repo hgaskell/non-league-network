@@ -1,14 +1,14 @@
 <form method="GET" action="/players" class="w-full">
-    <div class="pb-5 justify-evenly flex">
+    <div class="pb-5 justify-evenly flex hero-banner-search">
 
     
-        <select name="region" id="">
+        <select name="region" id="" class="w-32 block p-1 ps-5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 ring-primary-500 border-primary-500">
             <option value="">All Regions</option>
             @foreach ($regions as $region)
                 <option value="{{$region->slug}}">{{$region->name}}</option>
             @endforeach
         </select>
-        <select name="position" id="">
+        <select name="position" id="" class="w-32 block p-1 ps-5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 ring-primary-500 border-primary-500">
             <option value="">All Postions</option>
             @foreach ($positions as $position)
                 <option value="{{$position->slug}}">{{$position->name}}</option>

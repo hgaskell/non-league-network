@@ -2,7 +2,7 @@
 
 @include ('_header')
 
-<form method="POST" action="{{ route('login') }}">
+<form method="POST" action="{{ route('login') }}" >
     @csrf
     <div>
         <label for="email">Email:</label>
@@ -17,4 +17,4 @@
     </div>
 </form>
 
-</x-layout>
+</x-layout> 

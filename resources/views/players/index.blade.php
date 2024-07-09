@@ -3,8 +3,8 @@
   @include ('_header')
 
 <div class="bg-white">
-  <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-    <p class="mt-2 text-lg leading-8 text-gray-600">
+  <div class="mx-auto max-w-2xl px-2 py-16 sm:px-6 sm:py-12 lg:max-w-7xl lg:px-2">
+    <p class="mt-2 text-lg leading-8 text-gray-600 mb-5">
       <a href="{{ url()->previous() }}">Back</a>
       <a href="/players?region={{ isset($currentRegion) ? $currentRegion->slug : ''}}">{{ isset($currentRegion) ? ' / ' . ucwords($currentRegion->name) : ''}}</a>
       <a href="/players?position={{ isset($currentPosition) ? $currentPosition->slug : ''}}">{{ isset($currentPosition) ? ' / ' . ucwords($currentPosition->name) : ''}}</a>

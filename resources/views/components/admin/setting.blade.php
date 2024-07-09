@@ -1,22 +1,21 @@
-@props(['heading']);
+@props(['heading'])
 
-<section class="py-8 max-w-5xl mx-auto">
-    <h1 class="text-lg font-bold mb-8 pb-2">{{ $heading }}</h1>
+<section class="py-8 max-w-5xl mx-auto primary-color">
+    <h1 class="text-4l font-bold tracking-tight primary-color sm:text-6xl pb-5">{{ $heading }}</h1>
     <div class="flex">
         <aside class="w-48">
-            <h4 class="font-semibold mb-4">Admin</h4>
             <ul>
                 <li>
-                    <a href="/admin" class="{{ request()->is('admin') ? 'text-blue-500' : ''}}">Dashboard</a>
+                    <a href="/admin" class="{{ request()->is('admin') ? 'opacity-100 font-semibold' : 'opacity-70'}}">Dashboard</a>
                 </li>
                 <li>
-                    <a href="/admin/players" class="{{ request()->is('admin/players') ? 'text-blue-500' : ''}}">All Players</a>
+                    <a href="/admin/players" class="{{ request()->is('admin/players') ? 'opacity-100 font-semibold' : 'opacity-70'}}">All Players</a>
                 </li>
                 <li>
-                    <a href="/admin/players/create" class="{{ request()->is('admin/players/create') ? 'text-blue-500' : ''}}">Create New Player</a>
+                    <a href="/admin/players/create" class="{{ request()->is('admin/players/create') ? 'opacity-100 font-semibold' : 'opacity-70'}}">Create New Player</a>
                 </li>
                 <li>
-                    <a href="/admin/messages" class="{{ request()->is('admin/messages') ? 'text-blue-500' : ''}}">Inbox</a>
+                    <a href="/admin/messages" class="{{ request()->is('admin/messages') ? 'opacity-100 font-semibold' : 'opacity-70'}}">Inbox</a>
                 </li>
             </ul>
         </aside>

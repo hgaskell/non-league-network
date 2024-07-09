@@ -32,7 +32,7 @@ Route::middleware('guest')->group(function(){
 Route::middleware('auth')->group(function(){
     Route::post('logout', [SessionsController::class, 'destroy']);
 
-    Route::get('admin',[DashboardController::class, 'index']);
+    Route::get('admin',[DashboardController::class, 'index'])->name('admin');
 
     Route::get('admin/players', [AdminPlayerController::class, 'index']);
     Route::post('admin/players', [AdminPlayerController::class, 'store']);

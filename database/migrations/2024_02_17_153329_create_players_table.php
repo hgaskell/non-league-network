@@ -23,10 +23,10 @@ return new class extends Migration
             $table->string('player_image')->nullable();
             $table->text('player_dob');
             $table->text('player_bio');
-            $table->text('player_email');
+            //$table->text('player_email');
             $table->text('player_height');
             $table->text('player_preferred_foot');
-            //$table->boolean('player_status');
+            $table->boolean('player_status');
             $table->timestamps();
         });
     }

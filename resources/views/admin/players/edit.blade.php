@@ -12,7 +12,7 @@
                     <x-form.input name="player_dob" type="date" label="DOB" :value="old('player_dob', $player->player_dob)" />
                     <div class="sm:col-span-2">
                         <x-form.label name="position_id" label="Position" />
-                        <select name="position_id" id="position_id">
+                        <select name="position_id" id="position_id" class="text-gray-900">
                             @foreach (\App\Models\Position::all() as $position)
                                 <option
                                     value="{{ $position->id}}"
@@ -24,7 +24,7 @@
                     </div>
                     <div class="sm:col-span-2">
                         <x-form.label name="region_id" label="Region" />
-                        <select name="region_id" id="region_id">
+                        <select name="region_id" id="region_id" class="text-gray-900">
                             @foreach (\App\Models\Region::all() as $region)
                                 <option
                                     value="{{ $region->id}}"
@@ -35,7 +35,7 @@
                         <x-form.error name="region_id" />
                     </div>
                     <x-form.textarea name="player_bio" type="text" label="Bio">{{ old('player_bio', $player->player_bio) }}</x-form.textarea>
-                    <x-form.input name="player_height" type="text" label="Height" :value="old('player_height', $player->player_height)" />
+                    <x-form.input name="player_height" type="text" label="Height (cm)" :value="old('player_height', $player->player_height)" />
                     <x-form.input name="player_preferred_foot" type="text" label="Preferred Foot" :value="old('player_preferred_foot', $player->player_preferred_foot)" />
                     <div class="flex mt-6 sm:col-span-2">
                         <div class="flex-1">

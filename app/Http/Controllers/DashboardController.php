@@ -16,9 +16,14 @@ class DashboardController extends Controller
         $activePlayersCount = Player::where('user_id', $userID)->where('player_status',1)->count();
         $unreadMessagesCount = Message::where('user_id', $userID)->where('unread',1)->count();
 
+        $totalPlayersCount = Player::where('user_id', $userID)->count();
+        $totalMessagesCount = Message::where('user_id', $userID)->count();
+
         return view('admin.dashboard',[
             'activePlayersCount' => $activePlayersCount,
-            'unreadMessagesCount' => $unreadMessagesCount
+            'unreadMessagesCount' => $unreadMessagesCount,
+            'totalPlayersCount' => $totalPlayersCount,
+            'totalMessagesCount' => $totalMessagesCount
         ]);
     }
 }

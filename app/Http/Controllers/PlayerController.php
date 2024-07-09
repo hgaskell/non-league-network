@@ -15,7 +15,7 @@ class PlayerController extends Controller
     public function index()
     {
         return view('players.index', [
-            'players' => Player::active()->latest()->filter(request(['search','region','position']))->paginate(2)->withQueryString(),
+            'players' => Player::active()->latest()->filter(request(['search','region','position']))->paginate(8)->withQueryString(),
             'currentRegion' => Region::firstWhere('slug', request('region')),
             'currentPosition' => Position::firstWhere('slug', request('position')),
             'positions' => Position::all()

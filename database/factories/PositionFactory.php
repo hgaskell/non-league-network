@@ -24,4 +24,37 @@ class PositionFactory extends Factory
             'slug' => $this->faker->slug
         ];
     }
+
+    public function goalkeeper()
+    {
+        return [
+            'name' => 'Goalkeeper',
+            'slug' => 'goalkeeper'
+        ];
+    }
+
+    public function defender()
+    {
+        return [
+            'name' => 'Defender',
+            'slug' => 'defender'
+        ];
+    }
+
+    public function midfielder()
+    {
+        return [
+            'name' => 'Midfielder',
+            'slug' => 'midfielder'
+        ];
+    }
+
+    public function forward()
+    {
+        return [
+            'name' => 'Forward',
+            'slug' => 'forward'
+        ];
+    }
 }
+ 

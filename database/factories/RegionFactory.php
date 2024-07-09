@@ -24,4 +24,36 @@ class RegionFactory extends Factory
             'slug' => $this->faker->slug
         ];
     }
+
+    public function england()
+    {
+        return [
+            'name' => 'England',
+            'slug' => 'england'
+        ];
+    }
+
+    public function wales()
+    {
+        return [
+            'name' => 'Wales',
+            'slug' => 'wales'
+        ];
+    }
+
+    public function scotland()
+    {
+        return [
+            'name' => 'Scotland',
+            'slug' => 'scotland'
+        ];
+    }
+
+    public function northernIreland()
+    {
+        return [
+            'name' => 'Northern Ireland',
+            'slug' => 'northern-ireland'
+        ];
+    }
 }

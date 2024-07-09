@@ -18,6 +18,9 @@ return new class extends Migration
             $table->foreignId('player_id')->constrained()->cascadeOnDelete();
             $table->text('body');
             $table->string('email');
+            $table->string('subject');
+            $table->integer('user_id');
+            $table->boolean('unread');
             $table->timestamps();
         });
     }

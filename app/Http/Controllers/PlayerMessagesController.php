@@ -41,7 +41,8 @@ class PlayerMessagesController extends Controller
             'subject' => request('subject'),
             'body' => request('message'),
             'email' => request('email'),
-            'user_id' => $player->user_id
+            'user_id' => $player->user_id,
+            'unread' => true
         ]);
 
         return back()->with('success', "Message Sent!");;

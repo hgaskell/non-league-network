@@ -23,10 +23,19 @@ class DatabaseSeeder extends Seeder
 
         User::truncate();
         Position::truncate();
-        Player::truncate();
-        Region::truncate();
+
+        Player::factory()->goalkeeper();
+        Player::factory()->defender();
+        Player::factory()->midfielder();
+        Player::factory()->forward();
+
+        Region::factory()->england();
+        Region::factory()->wales();
+        Region::factory()->scotland();
+        Region::factory()->northernIreland();
 
         Player::factory(5)->create();
 
     }
 }
+ 

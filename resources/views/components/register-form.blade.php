@@ -1,7 +1,7 @@
-<x-layout>
-    <div class="px-6 py-8">
+
+    <div class="px-6 py-8 background-primary text-color">
         <div class="max-w-lg mx-auto mt-10">
-            <h1 class="text-center font-bold text-xl">Register</h1>
+            <h2 class="font-bold tracking-tight text-color sm:text-5xl pb-5 text-center">Join The Team</h2>
             <form method="POST" action="/register">
             @csrf
                 <div class="mb-6">
@@ -22,8 +22,7 @@
                     <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                     @enderror
                 </div>
-                <x-form.button name="Register" />
+                <x-form.button name="Sign Up" />
             </form>
         </div>
-    </div>
-</x-layout>
+    </div> 

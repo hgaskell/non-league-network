@@ -29,7 +29,7 @@ class SessionsController extends Controller
 
         session()->regenerate(); //to prevent session fixation attacks
 
-        return redirect('/')->with('success', 'Welcome Back!');
+        return redirect('/admin')->with('success', 'Welcome Back!');
 
     }
 
