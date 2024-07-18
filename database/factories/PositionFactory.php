@@ -20,7 +20,7 @@ class PositionFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->word,
+            'name' => $this->faker->randomElement(['Goalkeeper', 'Defender','Midfielder','Forward']),
             'slug' => $this->faker->slug
         ];
     }

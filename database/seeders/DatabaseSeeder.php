@@ -8,7 +8,8 @@ use App\Models\Position;
 use App\Models\Player;
 use App\Models\User;
 use App\Models\Region;
-
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,19 +23,32 @@ class DatabaseSeeder extends Seeder
     {
 
         User::truncate();
+        User::create([
+            'name' => 'Harry Gaskell',
+            'email' => 'harry@shopblocks.com',
+            'password' => Hash::make('password')
+        ]);
+
         Position::truncate();
+        $positions = [
+            ['name' => 'Goalkeeper','slug' => 'goalkeeper'],
+            ['name' => 'Defender','slug' => 'defender'],
+            ['name' => 'Midfielder','slug' => 'midfielder'],
+            ['name' => 'Forward','slug' => 'forward']
+        ];
+        DB::table('positions')->insert($positions);
 
-        Player::factory()->goalkeeper();
-        Player::factory()->defender();
-        Player::factory()->midfielder();
-        Player::factory()->forward();
+        Region::truncate();
+        $regions = [
+            ['name' => 'England','slug' => 'england'],
+            ['name' => 'Wales','slug' => 'wales'],
+            ['name' => 'Scotland','slug' => 'scotland'],
+            ['name' => 'Northern Ireland','slug' => 'Northern Ireland']
+        ];
+        DB::table('regions')->insert($regions);
 
-        Region::factory()->england();
-        Region::factory()->wales();
-        Region::factory()->scotland();
-        Region::factory()->northernIreland();
-
-        Player::factory(5)->create();
+        DB::table('players')->delete();
+        Player::factory(15)->create();
 
     }
 }

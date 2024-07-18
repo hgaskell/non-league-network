@@ -21,19 +21,15 @@ class PlayerFactory extends Factory
     {
         return [
             'player_name' => $this->faker->name,
-            'player_image' => $this->faker->imageUrl(),
+            'player_image' => 'images/29MSel27cWMyyIDwQixO.webp',
             'player_dob' => $this->faker->date(),
-            'player_position' => $this->faker->word,
-            'player_region' => $this->faker->country,
+            'position_id' => $this->faker->numberBetween(1, 4),
+            'region_id' => $this->faker->numberBetween(1, 4),
             'player_bio' => $this->faker->sentence,
-            'player_email' => $this->faker->unique()->safeEmail,
             'player_height' => $this->faker->numberBetween(150, 200),
             'player_preferred_foot' => $this->faker->randomElement(['Left', 'Right']),
-            'player_tag' => $this->faker->word,
-            'user_id' => User::factory(),
-            'position_id' => Position::factory(),
-            'region_id' => Region::factory(),
-            'player_status' => 'Active',
+            'user_id' => 1,
+            'player_status' => true,
             'slug' => $this->faker->slug
         ];
     }
